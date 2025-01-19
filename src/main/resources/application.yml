@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: Literalura
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/literalura
+    username: postgres
+    password: new_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        hibernate.format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: OFF
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF
+
